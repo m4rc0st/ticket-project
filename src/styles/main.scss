@@ -1,5 +1,28 @@
+h1{
+  font-family: 'Inter', sans-serif;
+  margin-left: 5px;
+}
+
+h2{
+  color: #DE2121;
+  margin-left: 5px;
+}
+
+p{
+  color: #808080;
+  font-size: 14px;
+  margin-top: 2px;
+  
+}
+.titulo{
+  font-size: 16px;
+  color: #000000;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -7,5 +30,80 @@ body {
   .container {
     max-width: 1200px;
     margin: 0 auto;
+    
   }
+
+.container2{
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+}
+input{
+  border-radius: 5px;
+  border: 3px solid var(#7C7C8A);
+  background:#FFF;
+  height: 35px;
+  flex-shrink: 0;
+  margin-left: 10px;
+  margin-top: 20px;
+
+  &.busca {
+    width: 400px;
+  }
+  &.busca-pais {
+    width: 200px;
+  }
+}
+
+button{
+  border-radius: 5px;
+  margin-left: 10px;
+
+  &.busca {
+    border: 1px solid #DE2121;
+    background:#FFF;
+    color: #DE2121;
+    width: 100px;
+    height: 35px;
+  }
+  
+  &.compra{
+    background:#de2121c7;
+    color: #FFF;
+    width: 220px;
+    height: 25px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    
+  }
+
+  &:hover {
+    background: #DE2121;
+    color: #FFF;
+  }
+}
+.event {
+  display: inline-block;
+  width: 250px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  vertical-align: top;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.banner {
+  border-radius: 10px 10px 10px 10px; 
+  width: 250px;
+  height: 70px;
+
+  &:hover {
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+
     

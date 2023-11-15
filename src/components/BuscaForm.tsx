@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 interface BuscaFormProps {
   onSearch: (query: string, country: string) => void;
 }
@@ -13,21 +14,25 @@ const BuscaForm: React.FC<BuscaFormProps> = ({ onSearch }) => {
   };
 
   return (
-    <div>
-      <h2>Buscar Eventos</h2>
+    <div className="container">
+      <h1>Meu Ticket</h1>
+      <>
+        <input
+          className="busca"
+          type="text"
+          placeholder="Pesquisar evento"
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+        />
+      </>
       <input
-        type="text"
-        placeholder="Pesquisar evento"
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-      />
-      <input
+        className='busca-pais'
         type="text"
         placeholder="Código do País"
         value={country}
         onChange={e => setCountry(e.target.value)}
       />
-      <button onClick={handleSearch}>Buscar</button>
+      <button className='busca' onClick={handleSearch}>PROCURAR</button>
     </div>
   );
 };

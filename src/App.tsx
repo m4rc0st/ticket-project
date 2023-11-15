@@ -25,7 +25,13 @@ function App() {
   return (
     <div className="container">
       <BuscaForm onSearch={handleSearch} />
+      <h2>Vamos nos permitir!</h2>
       <EventoLista events={searchResults} />
+      <h2>O tempo não para</h2>
+      <EventoLista events={searchResults} />
+      <h2>O tempo não para</h2>
+      <EventoLista events={searchResults} />
+
     </div>
   );
 }
