@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+# ticket-project
+> Este repositório tem o intuito de constuir uma aplicação, com consumo da API do [TicketMaster](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requisistos do projeto
 
-Currently, two official plugins are available:
+A aplicação é baseada em React.js, que permita aos usuários realizar as seguintes ações:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Ao abrir a aplicação web usuário deverá ver algumas sugestões de eventos com seus respectivos nomes, banners, link para o site de compra e o período de venda dos ingressos.
+2. O usuário deverá ser capaz de buscar por **atrações** e por **eventos** utilizando um campo de texto e sendo capaz de selecionar o país onde ele ocorrerá.
+3. Os resultados da busca devem ser exibidos na página com as mesmas informações das sugestões iniciais (nomes, banners, link para o site de compra e o período de venda dos ingressos).
+4. Deve-se utilizar a API do [TicketMaster](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/).
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Rodando a Aplicação
+Clone o repositório
+```sh
+git clone https://github.com/m4rc0st/ticket-project.git)https://github.com/m4rc0st/ticket-project.git
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Instale o node dentro do projeto
+```sh
+cd ticket-project
+npm install
+```
+Inicie a aplicação
+```sh
+npm run dev
+```
+### Estrutura do source
+```sh
+src/
+|-- assests/
+|-- components/
+|   |-- BuscaForm.js
+|   |-- EventoLista.js
+|-- services/
+|   |-- ticketMasterApi.js
+|-- styles/
+|-- App.js
+|-- index.js
+```
