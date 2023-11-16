@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import logo from '../assets/logo-meu-ticket-vazada.svg';
+
 
 
 interface BuscaFormProps {
@@ -15,24 +17,25 @@ const BuscaForm: React.FC<BuscaFormProps> = ({ onSearch }) => {
 
   return (
     <div className="container">
-      <h1>Meu Ticket</h1>
-      <>
+      <img src={logo} />
+      <div className='container2'>
+          <input
+            className="busca"
+            type="text"
+            placeholder="Pesquisar evento, show, artista,... "
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
         <input
-          className="busca"
+          className='busca-pais'
           type="text"
-          placeholder="Pesquisar evento"
-          value={query}
-          onChange={e => setQuery(e.target.value)}
+          placeholder="Código do País"
+          value={country}
+          onChange={e => setCountry(e.target.value)}
         />
-      </>
-      <input
-        className='busca-pais'
-        type="text"
-        placeholder="Código do País"
-        value={country}
-        onChange={e => setCountry(e.target.value)}
-      />
-      <button className='busca' onClick={handleSearch}>PROCURAR</button>
+        
+        <button className='busca' onClick={handleSearch}>PROCURAR</button>
+      </div>
     </div>
   );
 };

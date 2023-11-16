@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react';
-import BuscaForm from '/home/marcos/Documentos/teste-tecnico-frontend/ticket-project/src/components/BuscaForm.tsx';
-import EventoLista from '/home/marcos/Documentos/teste-tecnico-frontend/ticket-project/src/components/EventoLista.tsx';
+import BuscaForm from '../src/components/BuscaForm.tsx';
+import EventoLista from '../src/components/EventoLista.tsx';
 import { searchEvents } from './services/ticketMasterApi';
 import './styles/main.scss';
 
@@ -27,9 +27,9 @@ function App() {
       <BuscaForm onSearch={handleSearch} />
       <h2>Vamos nos permitir!</h2>
       <EventoLista events={searchResults} />
-      <h2>O tempo não para</h2>
+      <h2>Enquanto houver sol</h2>
       <EventoLista events={searchResults} />
-      <h2>O tempo não para</h2>
+      <h2>Eventos de Destaque</h2>
       <EventoLista events={searchResults} />
 
     </div>

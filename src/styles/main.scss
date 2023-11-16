@@ -15,7 +15,7 @@ p{
   
 }
 .titulo{
-  font-size: 16px;
+  font-size: 14px;
   color: #000000;
   font-weight: 600;
   margin: 10px 0;
@@ -25,36 +25,42 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #F3F3F3;
   }
   
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.logo{
+  margin-top: 0px;
+}
+
 
 .container2{
-  overflow: auto;
-  white-space: nowrap;
   display: flex;
   justify-content: center;
 }
+
 input{
   border-radius: 5px;
-  border: 3px solid var(#7C7C8A);
+  border: 2px solid var(--gray-400, #7C7C8A);
   background:#FFF;
   height: 35px;
   flex-shrink: 0;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin-left: 20px;
 
   &.busca {
     width: 400px;
+    
   }
   &.busca-pais {
     width: 200px;
   }
 }
+
 
 button{
   border-radius: 5px;
@@ -66,6 +72,8 @@ button{
     color: #DE2121;
     width: 100px;
     height: 35px;
+    flex-shrink: 0;
+    margin-top: 2px;
   }
   
   &.compra{
@@ -84,11 +92,15 @@ button{
   }
 }
 .event {
+  background: #FFF;
+  border-radius: 10px 10px 0px 0px;
   display: inline-block;
   width: 250px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  vertical-align: top;
+  height: 220px;
+  margin-right: 10px;
+  //vertical-align: top;
+  //justify-content: center;
+  //align-items: center;
   transition: box-shadow 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
 
   &:hover {
@@ -106,4 +118,5 @@ button{
   }
 }
 
-    
+
+
